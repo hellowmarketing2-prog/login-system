@@ -1,0 +1,56 @@
+.cercle {
+    /* height: 200px;
+    width: 190px; */
+    border: 2px solid black;
+    position: relative;
+    background-color: rgb(250, 245, 245);
+    border-radius: 135px;
+    left: 6px;
+    height: 300px;
+    width: 300px;
+    bottom: 310px;
+    padding: 41px 26px;
+    margin: 33px;
+}
+
+
+.cercle h1{
+    color: blue;
+font-size: 37px;
+}
+
+    .morph-container {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      overflow: hidden;
+      animation: float 4s ease-in-out infinite alternate;
+      border-radius: 20% 20% 20% 20%; /* initial round corners */
+    }
+
+    .morph-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: inherit;
+      animation: morph 5s ease-in-out infinite;
+    }
+
+    /* floating up and down */
+    @keyframes float {
+        
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* soft corner morph */
+    @keyframes morph {
+      0%   { border-radius: 20% 20% 20% 20%; }
+      25%  { border-radius: 40% 20% 40% 20%; }
+      50%  { border-radius: 30% 50% 30% 50%; }
+      75%  { border-radius: 50% 30% 50% 30%; }
+      100% { border-radius: 20% 20% 20% 20%; }
+    }
+  
